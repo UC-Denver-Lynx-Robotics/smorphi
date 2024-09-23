@@ -11,6 +11,15 @@ For use with the Adafruit Motor Shield v2
 #include <Adafruit_MotorShield.h>
 #include <Adafruit_PWMServoDriver.h>
 #include <Adafruit_MCP23X17.h>
+#include "BluetoothSerial.h"
+
+#if !defined(CONFIG_BT_ENABLED) || !defined(CONFIG_BLUEDROID_ENABLED)
+#error Bluetooth is not enabled! Please run `make menuconfig` to and enable it
+#endif
+
+BluetoothSerial SerialBT;
+int direction;
+char buffer;
 
 // Create the motor shield object with the default I2C address
 Adafruit_MotorShield AFMS1 = Adafruit_MotorShield(0x60);
@@ -48,17 +57,46 @@ void setup() {
   myMotor3->setSpeed(150);
   myMotor4->setSpeed(150);
 
+  SerialBT.begin("ESP32test");
+  Serial.println("Bluetooth on, you can now pair.");
 
-
+  direction = -1;
 }
 
 void loop() {
   // Be sure to press ENABLE button on ESP32 board after uploading code to RUN
 
-  myMotor1->run(FORWARD);
-  myMotor2->run(FORWARD);
-  myMotor3->run(FORWARD);
-  myMotor4->run(FORWARD);
+
+
+  if (SerialBT.available()) {
+    buffer = SerialBT.read();
+    if (buffer == 'f') {
+      direction = 0;
+    } else if (buffer == 'r') {
+      direction = 1;
+    } else {
+      direction = -1;
+    }
+
+    if (direction == 0) {
+      myMotor1->run(FORWARD);
+      myMotor2->run(FORWARD);
+      myMotor3->run(FORWARD);
+      myMotor4->run(FORWARD);
+    } else if (direction == 1) {
+      myMotor1->run(BACKWARD);
+      myMotor2->run(BACKWARD);
+      myMotor3->run(BACKWARD);
+      myMotor4->run(BACKWARD);
+
+    } else {
+      myMotor1->run(BRAKE);
+      myMotor2->run(BRAKE);
+      myMotor3->run(BRAKE);
+      myMotor4->run(BRAKE);
+
+    }
+  }
 //  myMotor1->run(BACKWARD);
 //  myMotor2->run(BACKWARD);
 //  myMotor3->run(BACKWARD);

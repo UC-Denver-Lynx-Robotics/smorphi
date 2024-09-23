@@ -13,7 +13,9 @@ This folder contains the code for controlling [Robot Name] for the [Competition 
 ### Getting Started
 
 - **Development Tools**: [List of tools required].
-- **How to run the code**: [Instructions to compile/run].
+- **How to upload the code to the bot**: (1) Unplug + plug back in and (2) press reboot button at the connecting point of upload in arduino _every time_.
+- **How to run uploaded code on the bot**: (1) turn on (if it isn't already) and (2) press the reset button
+- **To connect to the board on Arduino**: use ESP32 Dev Model
 
 ## Contribution Guidelines
 

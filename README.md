@@ -1,6 +1,6 @@
-# [Robot Name] - [Competition Type] Repository
+# Smorphi - [Competition Type] Repository
 
-Welcome to the **[Robot Name]** repository for the [Competition Name] (e.g., Sumo, MicroMouse, Combat) at the National Robotics Competition (NRC). This repository is organized into three main directories: **Software**, **Hardware**, and **Electrical**. Each team should contribute to their respective sections, ensuring that all documentation is kept up to date.
+Welcome to the **Smorphi** repository. This repository is organized into three main directories: **Software**, **Hardware**, and **Electrical**. Each team should contribute to their respective sections, ensuring that all documentation is kept up to date.
 
 ## Repository Structure
 
@@ -28,15 +28,16 @@ Welcome to the **[Robot Name]** repository for the [Competition Name] (e.g., Sum
 
 ## Overview
 
-This project is focused on building a **[Robot Type]** robot for the [Competition Type] at NRC. The robot is designed to perform the following tasks:
+This project is focused on building a **Smorphi** robot. The robot is designed to perform the following tasks:
 
-- [Robot’s goals and tasks, e.g., push an opponent out of the sumo ring, autonomously navigate a maze, or engage in combat with another robot].
+### Currently there are 2 bots of this type.  Bot 2 is broken and being worked on by the mechanical team and bot 1 is working.
+
+- Drive around.
 
 ### Goals
 
-- **[Goal 1]**: [e.g., Develop efficient control systems for autonomous behavior].
-- **[Goal 2]**: [e.g., Design and build a durable robot chassis with optimized weight and strength].
-- **[Goal 3]**: [e.g., Power the robot efficiently while managing high motor torque].
+- **Fix the bots**: Get bot #2 working - currently it is broken.
+- **tbd...**: ...
 
 ## Getting Started
 
@@ -44,10 +45,21 @@ This project is focused on building a **[Robot Type]** robot for the [Competitio
 
 Before you start working on this project, make sure you have the following software and tools installed:
 
-- [Programming language and version] (e.g., Python 3.8, C++ 14)
-- [Hardware tools] (e.g., Arduino IDE, ROS, Fusion 360)
-- [Specific Libraries] (e.g., TensorFlow, OpenCV for image processing)
-- [Other dependencies]
+#### ELECTRICAL AND MECHANICAL TEAM:
+- **Hardware tools**:
+     - Github Desktop
+
+#### SOFTWARE TEAM:
+- **Programming language and version** C++ 14, C
+- **Hardware tools**:
+     - Arduino IDE
+     - Github Desktop
+- **Specific Libraries (for arduino)** ([How to install libraries onto arduino](https://www.build-electronic-circuits.com/arduino-libraries-and-how-to-install-them/#:~:text=Here%E2%80%99s%20how%20you%20do%20it%3A%201%20Open%20the,to%20select%20it%20and%20then%20click%20on%20%E2%80%9CInstall%E2%80%9D.))
+     - Adafruit_MotorShield.h
+     - Adafruit_PWMServoDriver.h
+     - Adafruit_MCP23X17.h
+- **Other Dependencies**
+     - Currently NA
 
 ### Cloning the Repository
 

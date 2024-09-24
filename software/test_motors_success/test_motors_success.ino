@@ -72,8 +72,12 @@ void loop() {
     buffer = SerialBT.read();
     if (buffer == 'f') {
       direction = 0;
-    } else if (buffer == 'r') {
+    } else if (buffer == 'b') {
       direction = 1;
+    } else if (buffer == 'l') {
+      direction = 2;
+    } else if (buffer == 'r')  {
+      direction = 3;
     } else {
       direction = -1;
     }
@@ -89,7 +93,20 @@ void loop() {
       myMotor3->run(BACKWARD);
       myMotor4->run(BACKWARD);
 
-    } else {
+    } else if (direction == 2) {
+      myMotor1->run(BACKWARD);
+      myMotor2->run(FORWARD);
+      myMotor3->run(BACKWARD);
+      myMotor4->run(FORWARD);
+
+    } else if (direction == 3) {
+      myMotor1->run(FORWARD);
+      myMotor2->run(BACKWARD);
+      myMotor3->run(FORWARD);
+      myMotor4->run(BACKWARD);
+
+    }
+    else {
       myMotor1->run(BRAKE);
       myMotor2->run(BRAKE);
       myMotor3->run(BRAKE);

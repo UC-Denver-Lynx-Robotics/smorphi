@@ -27,6 +27,9 @@ This folder contains the code for controlling [Robot Name] for the [Competition 
     - b = backward
     - r = right
     - l = left
+    - c = rotate clockwise
+    - a = rotate anti-clockwise
+    - s = stop
 
 **If you need to switch back to wired serial control**, switch the `SerialBT` object in `loop()` to `Serial`.
 

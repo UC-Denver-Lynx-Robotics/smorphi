@@ -76,42 +76,82 @@ void loop() {
       direction = 1;
     } else if (buffer == 'l') {
       direction = 2;
-    } else if (buffer == 'r')  {
+    } else if (buffer == 'r') {
       direction = 3;
-    } else {
+    } else if (buffer == 'c') {
+      direction = 4;
+    } else if (buffer == 'a') {
+      direction = 5;
+    } else if (buffer == 's') {
       direction = -1;
     }
 
     if (direction == 0) {
+      myMotor1->setSpeed(150);
+      myMotor2->setSpeed(150);
+      myMotor3->setSpeed(150);
+      myMotor4->setSpeed(150);
       myMotor1->run(FORWARD);
       myMotor2->run(FORWARD);
       myMotor3->run(FORWARD);
       myMotor4->run(FORWARD);
     } else if (direction == 1) {
+      myMotor1->setSpeed(150);
+      myMotor2->setSpeed(150);
+      myMotor3->setSpeed(150);
+      myMotor4->setSpeed(150);
       myMotor1->run(BACKWARD);
       myMotor2->run(BACKWARD);
       myMotor3->run(BACKWARD);
       myMotor4->run(BACKWARD);
 
     } else if (direction == 2) {
+      myMotor1->setSpeed(150);
+      myMotor2->setSpeed(150);
+      myMotor3->setSpeed(150);
+      myMotor4->setSpeed(150);
       myMotor1->run(BACKWARD);
       myMotor2->run(FORWARD);
       myMotor3->run(BACKWARD);
       myMotor4->run(FORWARD);
 
     } else if (direction == 3) {
+      myMotor1->setSpeed(150);
+      myMotor2->setSpeed(150);
+      myMotor3->setSpeed(150);
+      myMotor4->setSpeed(150);
       myMotor1->run(FORWARD);
       myMotor2->run(BACKWARD);
       myMotor3->run(FORWARD);
       myMotor4->run(BACKWARD);
 
-    }
-    else {
-      myMotor1->run(BRAKE);
-      myMotor2->run(BRAKE);
-      myMotor3->run(BRAKE);
-      myMotor4->run(BRAKE);
-
+    } else if (direction == 4) {
+      myMotor1->setSpeed(150);
+      myMotor2->setSpeed(150);
+      myMotor3->setSpeed(150);
+      myMotor4->setSpeed(150);
+      myMotor1->run(FORWARD);
+      myMotor2->run(BACKWARD);
+      myMotor3->run(BACKWARD);
+      myMotor4->run(FORWARD);
+    } else if (direction == 5) {
+      myMotor1->setSpeed(150);
+      myMotor2->setSpeed(150);
+      myMotor3->setSpeed(150);
+      myMotor4->setSpeed(150);
+      myMotor1->run(BACKWARD);
+      myMotor2->run(FORWARD);
+      myMotor3->run(FORWARD);
+      myMotor4->run(BACKWARD);
+    } else if (direction == -1) {
+      // myMotor1->run(BRAKE);
+      // myMotor2->run(BRAKE);
+      // myMotor3->run(BRAKE);
+      // myMotor4->run(BRAKE);
+      myMotor1->setSpeed(0);
+      myMotor2->setSpeed(0);
+      myMotor3->setSpeed(0);
+      myMotor4->setSpeed(0);
     }
   }
 //  myMotor1->run(BACKWARD);

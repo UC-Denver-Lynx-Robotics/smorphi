@@ -30,13 +30,13 @@ Welcome to the **Smorphi** repository. This repository is organized into three m
 
 This project is focused on building a **Smorphi** robot. The robot is designed to perform the following tasks:
 
-### Currently there are 2 bots of this type.  Bot 2 is broken and being worked on by the mechanical team and bot 1 is working.
+### Currently there are 2 bots of this type.  Bot 2 is loaded with app controlled code and bot 1 is working with a preprogrammed sequence.
 
 - Drive around.
 
 ### Goals
 
-- **Fix the bots**: Get bot #2 working - currently it is broken.
+- ~~**Fix the bots**: Get bot #2 working - currently it is broken.~~
 - **tbd...**: ...
 
 ## Getting Started

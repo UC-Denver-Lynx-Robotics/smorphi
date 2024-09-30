@@ -85,6 +85,48 @@ void loop() {
 
   delay(1000);
 
+  myMotor1->run(FORWARD);
+  myMotor2->run(FORWARD);
+  myMotor3->run(FORWARD);
+  myMotor4->run(FORWARD);
+
+  delay(500);
+
+  myMotor1->run(BACKWARD);
+  myMotor2->run(FORWARD);
+  myMotor3->run(BACKWARD);
+  myMotor4->run(FORWARD);
+
+  delay(500);
+
+  myMotor1->run(FORWARD);
+  myMotor2->run(BACKWARD);
+  myMotor3->run(BACKWARD);
+  myMotor4->run(FORWARD);
+
+  delay(3000);
+
+  myMotor1->run(BACKWARD);
+  myMotor2->run(FORWARD);
+  myMotor3->run(FORWARD);
+  myMotor4->run(BACKWARD);
+
+  delay(3000);
+
+  myMotor1->run(FORWARD);
+  myMotor2->run(BACKWARD);
+  myMotor3->run(FORWARD);
+  myMotor4->run(BACKWARD);
+
+  delay(500);
+
+  myMotor1->run(BACKWARD);
+  myMotor2->run(BACKWARD);
+  myMotor3->run(BACKWARD);
+  myMotor4->run(BACKWARD);
+
+  delay(500);
+
   }
 //  myMotor1->run(BACKWARD);
 //  myMotor2->run(BACKWARD);
